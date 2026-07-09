@@ -1,12 +1,11 @@
-import { useContext, useEffect, useRef, useState } from "react";
+
 import { Link, useLocation } from "react-router-dom";
-import { AuthContext } from "../context/ThemeContext";
 import "./Navbar.css";
 
 
 function Navbar(){
 
-const {setIsLoggedIn}=useContext(AuthContext);
+
 
 const location = useLocation();
 

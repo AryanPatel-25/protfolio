@@ -7,14 +7,11 @@ function Login(){
   const navigate = useNavigate();
 
 
-  const handleLogin = (e) => {
-
+ const handleLogin = (e) => {
     e.preventDefault();
 
     navigate("/dashboard");
-
-  };
-
+};
 
   return(
 
