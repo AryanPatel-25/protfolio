@@ -1,0 +1,27 @@
+.app-container {
+
+  min-height:100vh;
+
+  padding:25px;
+
+  background:#111;
+
+}
+
+
+
+.main-container {
+
+  margin-top:25px;
+
+  min-height:calc(100vh - 130px);
+
+  border:2px solid #444;
+
+  border-radius:25px;
+
+  background:#181818;
+
+  overflow:hidden;
+
+}

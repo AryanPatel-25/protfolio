@@ -1,0 +1,137 @@
+.about {
+
+    margin:30px;
+
+    padding:50px;
+
+   background:#0f172a;
+
+    color:white;
+
+    border-radius:25px;
+
+    text-align:center;
+
+}
+
+
+.about h1 {
+
+    color:#38bdf8;
+
+    font-size:38px;
+
+    margin-bottom:30px;
+
+}
+
+
+.about-content {
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+
+.about p {
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#e5e7eb;
+
+    margin-bottom:20px;
+
+}
+
+
+.about h3 {
+
+    color:#38bdf8;
+
+    font-size:24px;
+
+    margin-top:30px;
+
+}
+
+
+
+.skills-list {
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+
+.skills-list span {
+
+    background:#1f2937;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    font-size:16px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    border:1px solid transparent;
+
+}
+
+
+.skills-list span:hover {
+
+    transform:translateY(-8px) scale(1.05);
+
+    background:#38bdf8;
+
+    color:#111827;
+
+    border-color:#7dd3fc;
+
+    box-shadow:0 10px 25px rgba(56,189,248,0.5);
+
+}
+
+
+
+@media(max-width:768px){
+
+    .about{
+
+        padding:30px 20px;
+
+    }
+
+
+    .about h1{
+
+        font-size:32px;
+
+    }
+
+
+    .about p{
+
+        font-size:16px;
+
+    }
+
+}
