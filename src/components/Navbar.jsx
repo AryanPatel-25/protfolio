@@ -1,151 +1,85 @@
-
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 
 function Navbar(){
 
+  const navigate = useNavigate();
 
 
-const location = useLocation();
+  const handleLogout = () => {
 
-const [indicatorStyle,setIndicatorStyle]=useState({});
+    navigate("/");
 
+  };
 
-const refs = useRef({});
 
+  return (
 
-const menuItems=[
+    <nav className="navbar">
 
-{
-name:"Home",
-path:"/"
-},
 
-{
-name:"About",
-path:"/about"
-},
+      <div className="logo">
+        Aryan
+      </div>
 
-{
-name:"Skills",
-path:"/skills"
-},
 
-{
-name:"Projects",
-path:"/projects"
-},
+      <div className="nav-menu">
 
-{
-name:"Contact",
-path:"/contact"
-}
 
-];
+        <NavLink
+          to="/dashboard"
+          className="nav-link"
+        >
+          Home
+        </NavLink>
 
 
+        <NavLink
+          to="/about"
+          className="nav-link"
+        >
+          About
+        </NavLink>
 
-useEffect(()=>{
 
-const activeItem = 
-refs.current[location.pathname];
+        <NavLink
+          to="/skills"
+          className="nav-link"
+        >
+          Skills
+        </NavLink>
 
 
-if(activeItem){
+        <NavLink
+          to="/projects"
+          className="nav-link"
+        >
+          Projects
+        </NavLink>
 
-setIndicatorStyle({
 
-width:activeItem.offsetWidth,
+        <NavLink
+          to="/contact"
+          className="nav-link"
+        >
+          Contact
+        </NavLink>
 
-left:activeItem.offsetLeft
 
-});
+        <button
+          className="nav-link logout-btn"
+          onClick={handleLogout}
+        >
+          Logout
+        </button>
 
-}
+      </div>
 
 
-},[location.pathname]);
+    </nav>
 
-
-
-
-return(
-
-
-<nav className="navbar">
-
-
-<h2 className="logo">
-Aryan Portfolio
-</h2>
-
-
-
-<div className="nav-links">
-
-
-<div 
-className="indicator"
-style={indicatorStyle}
->
-</div>
-
-
-
-{
-menuItems.map((item)=>(
-
-
-<Link
-
-key={item.path}
-
-to={item.path}
-
-ref={(el)=>
-refs.current[item.path]=el
-}
-
-className="nav-item"
-
->
-
-
-{item.name}
-
-
-</Link>
-
-
-))
-
-}
-
-
-
-
-<button
-
-className="logout-btn"
-
-onClick={()=>setIsLoggedIn(false)}
-
->
-
-Logout
-
-</button>
-
-
-
-</div>
-
-
-</nav>
-
-
-)
+  );
 
 }
 
