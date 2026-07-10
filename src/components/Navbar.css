@@ -1,146 +1,124 @@
-.navbar {
-
-
-    height:75px;
-
-    width:100%;
-
+.navbar{
 
     display:flex;
-
+    justify-content:space-between;
     align-items:center;
 
-    justify-content:space-between;
+    margin:20px 30px;
+    padding:15px 30px;
 
-
-    padding:0 35px;
-
-
-    border:2px solid #444;
-
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
 
     border-radius:25px;
+    border:1px solid rgba(255,255,255,0.15);
 
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
 
-    background:#181818;
-
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.5);
-
+    position:sticky;
+    top:20px;
+    z-index:100;
 }
 
 
 
-
-.logo {
-
-
-    font-size:26px;
-
-
-    font-weight:700;
-
+.logo{
 
     color:white;
-
-
-    letter-spacing:1px;
-
+    font-size:24px;
+    font-weight:bold;
 
 }
 
 
 
-
-.nav-menu {
-
+.nav-menu{
 
     display:flex;
-
-
     align-items:center;
+    gap:10px;
 
+    background:rgba(255,255,255,0.05);
 
-    gap:8px;
-
-
-    background:#222;
-
-
-    padding:6px;
-
+    padding:8px;
 
     border-radius:30px;
 
-
-    border:1px solid #444;
-
 }
 
 
 
-
-.nav-link {
-
-
-    position:relative;
-
-
-    padding:11px 20px;
-
-
-    color:#aaa;
-
-
-    border-radius:25px;
-
-
-    font-size:15px;
-
-
-    font-weight:500;
-
-
-    transition:0.35s ease;
-
+.nav-link{
 
     text-decoration:none;
 
+    position:relative;
+
+    padding:10px 18px;
+
+    color:#e5e7eb;
+
+    border-radius:25px;
+
+    transition:.35s ease;
 
 }
 
 
 
-
-.nav-link:hover {
-
+.nav-link:hover{
 
     color:white;
-
 
 }
 
 
 
-
-.nav-link.active {
-
+.nav-link.active{
 
     color:white;
-
 
     background:linear-gradient(
         135deg,
-        #007aff,
-        #00c6ff
+        rgba(56,189,248,0.95),
+        rgba(59,130,246,0.8)
     );
 
-
     box-shadow:
+    0 0 20px rgba(56,189,248,0.6);
 
-    0 0 20px rgba(0,122,255,0.6);
+}
 
+
+
+.logout-btn{
+
+    margin-left:10px;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
+    border:1px solid #38bdf8;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+
+.logout-btn:hover{
+
+    background:#38bdf8;
+
+    color:#111827;
 
 }
 
@@ -148,29 +126,18 @@
 
 @media(max-width:900px){
 
+.navbar{
 
-    .navbar{
+    flex-direction:column;
+    gap:20px;
 
-        flex-direction:column;
+}
 
-        height:auto;
+.nav-menu{
 
-        gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
 
-        padding:20px;
-
-    }
-
-
-
-    .nav-menu{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
-
+}
 
 }

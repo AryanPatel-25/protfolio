@@ -3,7 +3,6 @@
 
     min-height:89vh;
 background:#0f172a;
-
 border-radius:25px;
     display:flex;
 
@@ -83,6 +82,54 @@ border-radius:25px;
 
 
     color:#ddd;
+
+
+}
+
+.contact-section{
+
+    margin:auto;
+
+    max-width:500px;
+
+    padding:30px;
+
+
+    background:#0f172a;
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+
+    border-radius:25px;
+
+
+    border:1px solid rgba(255,255,255,0.15);
+
+
+    transition:0.35s ease;
+
+
+}
+
+
+
+.contact-section:hover{
+
+
+    transform:translateY(-8px) scale(1.03);
+
+
+    background:#38bdf8;
+
+
+    border-color:#38bdf8;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(56,189,248,0.45);
 
 
 }
